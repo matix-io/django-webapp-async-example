@@ -1,0 +1,17 @@
+{% if not async %}
+<html>
+  <head></head>
+  <body>
+    <div id="header">
+      <a href="/page-1">Page 1</a>
+      <a href="/page-2">Page 2</a>
+    </div>
+    <div id="content">
+      {% endif %}
+      {% block content %}{% endblock %}
+      {% if not async %}
+    </div>
+    <script src="/static/hook.js"></script>
+  </body>
+</html>
+{% endif %}
